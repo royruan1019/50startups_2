@@ -4,28 +4,18 @@
 
 ## 專案結構
 
-```
-50startups_2/
-├── analysis_50startups.py          # 主程式（一鍵執行，產生所有產出）
-├── data_understanding_50startups.py # Phase 2-3 分析腳本（舊版）
-├── 50_Startups.csv                 # 原始資料
-├── report_50startups.md            # 中英雙語完整報告
-├── model_summary.csv               # 模型評估指標（可匯入 Excel）
-└── charts/
-    ├── 01_distribution.png         # 特徵分布
-    ├── 02_correlation_heatmap.png  # 相關係數熱力圖
-    ├── 03_scatter_rd_profit.png    # R&D vs Profit 散點圖
-    ├── 04_actual_vs_predicted.png  # 預測值 vs 實際值
-    ├── 05_residual_plot.png        # 殘差診斷
-    └── 06_feature_importance.png  # 特徵係數比較
-```
+- analysis_50startups.py — 主程式（一鍵執行，產生所有產出）
+- data_understanding_50startups.py — Phase 2-3 分析腳本（舊版）
+- 50_Startups.csv — 原始資料
+- report_50startups.md — 中英雙語完整報告
+- model_summary.csv — 模型評估指標（可匯入 Excel）
+- charts/ — 視覺化圖表（分布、熱力圖、散點圖、預測比較、殘差、係數）
 
 ## 快速執行
 
-```bash
-pip install pandas scikit-learn matplotlib seaborn
-python analysis_50startups.py
-```
+安裝依賴：pip install pandas scikit-learn matplotlib seaborn
+
+執行主程式：python analysis_50startups.py
 
 ---
 
@@ -103,7 +93,6 @@ python analysis_50startups.py
 ---
 
 ## Phase 2：Data Understanding（資料理解）
-
 
 ---
 
@@ -258,10 +247,6 @@ python analysis_50startups.py
 
 ### 步驟 2 — One-Hot Encoding（State 欄）
 
-```python
-df = pd.get_dummies(df, columns=['State'], drop_first=True)
-```
-
 | 轉換前 | 轉換後 |
 |---|---|
 | State = "New York" / "California" / "Florida" | State_Florida、State_New York（California 為基準捨棄） |
@@ -269,12 +254,6 @@ df = pd.get_dummies(df, columns=['State'], drop_first=True)
 產生的虛擬變數欄位：`['State_Florida', 'State_New York']`
 
 ### 步驟 3 — 切分訓練 / 測試集（80:20）
-
-```python
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
-)
-```
 
 | 資料集 | 筆數 |
 |---|---|
@@ -284,12 +263,6 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 ### 步驟 4 — 特徵標準化（StandardScaler）
 
-```python
-scaler = StandardScaler()
-X_train_sc = scaler.fit_transform(X_train)  # 只對訓練集 fit
-X_test_sc  = scaler.transform(X_test)       # 測試集只 transform
-```
-
 | 欄位 | 訓練集平均 | 訓練集標準差 |
 |---|---|---|
 | R&D Spend | 77,687.85 | 47,294.99 |
@@ -297,7 +270,6 @@ X_test_sc  = scaler.transform(X_test)       # 測試集只 transform
 | Marketing Spend | 235,747.08 | 113,419.04 |
 | State_Florida | 0.35 | 0.48 |
 | State_New York | 0.33 | 0.47 |
-
 
 > **注意**：`StandardScaler` 的 `fit()` 只能使用訓練集，避免資料洩漏（data leakage）。
 
@@ -340,13 +312,6 @@ X_test_sc  = scaler.transform(X_test)       # 測試集只 transform
 
 ### 多元線性迴歸係數（LinearRegression）
 
-```python
-from sklearn.linear_model import LinearRegression
-model = LinearRegression()
-model.fit(X_train, y_train)
-y_pred = model.predict(X_test)
-```
-
 | 特徵 | 係數 | 方向 |
 |---|---|---|
 | State_Florida | 938.7930 | 正相關 |
@@ -357,19 +322,6 @@ y_pred = model.predict(X_test)
 | 截距 (intercept) | 54,028.04 | — |
 
 ### Lasso 係數（特徵選擇結果）
-
-```python
-from sklearn.linear_model import Lasso
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
-
-# Pipeline 確保 CV 每個 fold 各自 fit scaler，消除 data leakage
-lasso_pipeline = Pipeline([
-    ("scaler", StandardScaler()),
-    ("lasso",  Lasso(alpha=1.0)),
-])
-lasso_pipeline.fit(X_train, y_train)
-```
 
 | 特徵 | 係數 | 方向 |
 |---|---|---|
@@ -430,47 +382,7 @@ lasso_pipeline.fit(X_train, y_train)
 
 ### 評估程式碼
 
-```python
-from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
-from sklearn.model_selection import cross_val_score
-import numpy as np
-
-y_pred = model.predict(X_test)
-
-r2   = r2_score(y_test, y_pred)
-rmse = np.sqrt(mean_squared_error(y_test, y_pred))
-mae  = mean_absolute_error(y_test, y_pred)
-cv   = cross_val_score(model, X_train, y_train, cv=5, scoring='r2')
-
-n, k   = len(X_test), X_test.shape[1]
-adj_r2 = 1 - (1 - r2) * (n - 1) / (n - k - 1)
-
-print(f"R²={r2:.4f}  Adj-R²={adj_r2:.4f}  RMSE=${rmse:,.0f}  MAE=${mae:,.0f}")
-print(f"CV R² = {cv.mean():.4f} ± {cv.std():.4f}")
-```
-
 ### 殘差診斷程式碼
-
-```python
-import matplotlib.pyplot as plt
-
-residuals = y_test.values - y_pred
-
-fig, axes = plt.subplots(1, 2, figsize=(12, 4))
-
-axes[0].scatter(y_pred, residuals, alpha=0.7)
-axes[0].axhline(0, color='red', linestyle='--')
-axes[0].set_xlabel('Predicted Profit')
-axes[0].set_ylabel('Residuals')
-axes[0].set_title('Residual vs Fitted')
-
-axes[1].hist(residuals, bins=15, edgecolor='black')
-axes[1].set_xlabel('Residuals')
-axes[1].set_title('Residual Distribution')
-
-plt.tight_layout()
-plt.savefig('residual_plot.png', dpi=150)
-```
 
 ### 評估結論
 
