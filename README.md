@@ -2,6 +2,8 @@
 
 > 本專案使用 CRISP-DM 框架對 [50 Startups Dataset](https://www.kaggle.com/datasets/farhanmd29/50-startups) 進行完整分析，涵蓋商業理解、資料理解、資料前處理、建模與評估五個階段。
 
+![CRISP-DM Flow](crisp_dm_50startups.svg)
+
 ## 專案結構
 
 - analysis_50startups.py — 主程式（一鍵執行，產生所有產出）

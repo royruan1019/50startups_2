@@ -1,0 +1,190 @@
+<svg width="100%" viewBox="0 0 680 1020" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>CRISP-DM 50 Startups 完整分析資訊圖表 Phase 1–5</title>
+  <desc>以 CRISP-DM 框架分析 Kaggle 50 Startups 資料集的五個階段摘要，含關鍵數據與模型評估結果</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="680" height="1020" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <rect x="40" y="18" width="600" height="44" rx="10" fill="#3C3489"/>
+  <text font-family="sans-serif" font-size="15" font-weight="600" fill="#CECBF6" x="340" y="34" text-anchor="middle" dominant-baseline="central">CRISP-DM × 50 Startups</text>
+  <text font-family="sans-serif" font-size="11" fill="#AFA9EC" x="340" y="52" text-anchor="middle" dominant-baseline="central">Kaggle · 多元線性迴歸 · n=50 · Python / sklearn</text>
+
+  <!-- PHASE 1 -->
+  <rect x="40" y="76" width="600" height="148" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <rect x="40" y="76" width="8" height="148" rx="4" fill="#534AB7"/>
+  <text font-family="sans-serif" font-size="11" font-weight="600" fill="#3C3489" x="58" y="94" dominant-baseline="central">Phase 1 — Business Understanding</text>
+  <rect x="58"  y="106" width="128" height="48" rx="6" fill="#CECBF6"/>
+  <rect x="196" y="106" width="128" height="48" rx="6" fill="#CECBF6"/>
+  <rect x="334" y="106" width="128" height="48" rx="6" fill="#CECBF6"/>
+  <rect x="472" y="106" width="150" height="48" rx="6" fill="#CECBF6"/>
+  <text font-family="sans-serif" font-size="10" fill="#534AB7" x="122" y="118" text-anchor="middle" dominant-baseline="central">任務類型</text>
+  <text font-family="sans-serif" font-size="10" fill="#534AB7" x="260" y="118" text-anchor="middle" dominant-baseline="central">目標變數</text>
+  <text font-family="sans-serif" font-size="10" fill="#534AB7" x="398" y="118" text-anchor="middle" dominant-baseline="central">成功門檻</text>
+  <text font-family="sans-serif" font-size="10" fill="#534AB7" x="547" y="118" text-anchor="middle" dominant-baseline="central">利害關係人</text>
+  <text font-family="sans-serif" font-size="12" font-weight="600" fill="#26215C" x="122" y="140" text-anchor="middle" dominant-baseline="central">迴歸</text>
+  <text font-family="sans-serif" font-size="12" font-weight="600" fill="#26215C" x="260" y="140" text-anchor="middle" dominant-baseline="central">Profit</text>
+  <text font-family="sans-serif" font-size="12" font-weight="600" fill="#26215C" x="398" y="140" text-anchor="middle" dominant-baseline="central">R² ≥ 0.90</text>
+  <text font-family="sans-serif" font-size="12" font-weight="600" fill="#26215C" x="547" y="140" text-anchor="middle" dominant-baseline="central">投資人</text>
+  <text font-family="sans-serif" font-size="10" fill="#534AB7" x="58" y="168" dominant-baseline="central">先驗假設驗證：</text>
+  <rect x="148" y="158" width="72" height="20" rx="10" fill="#534AB7"/>
+  <text font-family="sans-serif" font-size="10" fill="#EEEDFE" x="184" y="168" text-anchor="middle" dominant-baseline="central">H1 R&amp;D ✓</text>
+  <rect x="228" y="158" width="84" height="20" rx="10" fill="#534AB7"/>
+  <text font-family="sans-serif" font-size="10" fill="#EEEDFE" x="270" y="168" text-anchor="middle" dominant-baseline="central">H2 Marketing ✓</text>
+  <rect x="320" y="158" width="96" height="20" rx="10" fill="#7F77DD"/>
+  <text font-family="sans-serif" font-size="10" fill="#EEEDFE" x="368" y="168" text-anchor="middle" dominant-baseline="central">H3 Admin 弱 ~</text>
+  <rect x="424" y="158" width="82" height="20" rx="10" fill="#1D9E75"/>
+  <text font-family="sans-serif" font-size="10" fill="#E1F5EE" x="465" y="168" text-anchor="middle" dominant-baseline="central">H4 State 歸零 ✓</text>
+
+  <line x1="340" y1="224" x2="340" y2="244" stroke="#888780" stroke-width="1" marker-end="url(#arr)"/>
+
+  <!-- PHASE 2 -->
+  <rect x="40" y="244" width="600" height="148" rx="8" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.5"/>
+  <rect x="40" y="244" width="8" height="148" rx="4" fill="#1D9E75"/>
+  <text font-family="sans-serif" font-size="11" font-weight="600" fill="#085041" x="58" y="262" dominant-baseline="central">Phase 2 — Data Understanding</text>
+  <rect x="58"  y="274" width="90" height="48" rx="6" fill="#9FE1CB"/>
+  <rect x="156" y="274" width="90" height="48" rx="6" fill="#9FE1CB"/>
+  <rect x="254" y="274" width="90" height="48" rx="6" fill="#9FE1CB"/>
+  <rect x="352" y="274" width="90" height="48" rx="6" fill="#9FE1CB"/>
+  <rect x="450" y="274" width="172" height="48" rx="6" fill="#9FE1CB"/>
+  <text font-family="sans-serif" font-size="10" fill="#0F6E56" x="103" y="286" text-anchor="middle" dominant-baseline="central">樣本數</text>
+  <text font-family="sans-serif" font-size="10" fill="#0F6E56" x="201" y="286" text-anchor="middle" dominant-baseline="central">欄位數</text>
+  <text font-family="sans-serif" font-size="10" fill="#0F6E56" x="299" y="286" text-anchor="middle" dominant-baseline="central">缺失值</text>
+  <text font-family="sans-serif" font-size="10" fill="#0F6E56" x="397" y="286" text-anchor="middle" dominant-baseline="central">類別欄</text>
+  <text font-family="sans-serif" font-size="10" fill="#0F6E56" x="536" y="286" text-anchor="middle" dominant-baseline="central">R&amp;D Spend 相關性</text>
+  <text font-family="sans-serif" font-size="14" font-weight="700" fill="#04342C" x="103" y="308" text-anchor="middle" dominant-baseline="central">50</text>
+  <text font-family="sans-serif" font-size="14" font-weight="700" fill="#04342C" x="201" y="308" text-anchor="middle" dominant-baseline="central">5</text>
+  <text font-family="sans-serif" font-size="14" font-weight="700" fill="#04342C" x="299" y="308" text-anchor="middle" dominant-baseline="central">0</text>
+  <text font-family="sans-serif" font-size="14" font-weight="700" fill="#04342C" x="397" y="308" text-anchor="middle" dominant-baseline="central">1 (State)</text>
+  <text font-family="sans-serif" font-size="14" font-weight="700" fill="#04342C" x="536" y="308" text-anchor="middle" dominant-baseline="central">r = 0.97</text>
+  <text font-family="sans-serif" font-size="10" fill="#0F6E56" x="58" y="338" dominant-baseline="central">相關性排名：</text>
+  <rect x="138" y="331" width="97" height="14" rx="3" fill="#1D9E75"/>
+  <text font-family="sans-serif" font-size="10" fill="#04342C" x="240" y="338" dominant-baseline="central">R&amp;D 0.97</text>
+  <rect x="310" y="331" width="6" height="14" rx="3" fill="#5DCAA5"/>
+  <text font-family="sans-serif" font-size="10" fill="#0F6E56" x="322" y="338" dominant-baseline="central">Mkt 0.05</text>
+  <rect x="420" y="331" width="4" height="14" rx="3" fill="#9FE1CB"/>
+  <text font-family="sans-serif" font-size="10" fill="#0F6E56" x="430" y="338" dominant-baseline="central">Admin 0.04</text>
+  <text font-family="sans-serif" font-size="10" fill="#0F6E56" x="530" y="338" dominant-baseline="central">State ≈ 0</text>
+
+  <line x1="340" y1="392" x2="340" y2="412" stroke="#888780" stroke-width="1" marker-end="url(#arr)"/>
+
+  <!-- PHASE 3 -->
+  <rect x="40" y="412" width="600" height="140" rx="8" fill="#FAECE7" stroke="#D85A30" stroke-width="0.5"/>
+  <rect x="40" y="412" width="8" height="140" rx="4" fill="#D85A30"/>
+  <text font-family="sans-serif" font-size="11" font-weight="600" fill="#712B13" x="58" y="430" dominant-baseline="central">Phase 3 — Data Preparation</text>
+  <circle cx="84" cy="460" r="14" fill="#D85A30"/>
+  <text font-family="sans-serif" font-size="11" font-weight="700" fill="#FAECE7" x="84" y="460" text-anchor="middle" dominant-baseline="central">1</text>
+  <text font-family="sans-serif" font-size="11" font-weight="600" fill="#712B13" x="106" y="456" dominant-baseline="central">確認品質</text>
+  <text font-family="sans-serif" font-size="10" fill="#993C1D" x="106" y="470" dominant-baseline="central">缺失值 0 · 重複列 0</text>
+  <line x1="158" y1="460" x2="178" y2="460" stroke="#D85A30" stroke-width="1" marker-end="url(#arr)"/>
+  <circle cx="204" cy="460" r="14" fill="#D85A30"/>
+  <text font-family="sans-serif" font-size="11" font-weight="700" fill="#FAECE7" x="204" y="460" text-anchor="middle" dominant-baseline="central">2</text>
+  <text font-family="sans-serif" font-size="11" font-weight="600" fill="#712B13" x="226" y="456" dominant-baseline="central">One-Hot Encoding</text>
+  <text font-family="sans-serif" font-size="10" fill="#993C1D" x="226" y="470" dominant-baseline="central">State → 2 虛擬變數</text>
+  <line x1="370" y1="460" x2="390" y2="460" stroke="#D85A30" stroke-width="1" marker-end="url(#arr)"/>
+  <circle cx="416" cy="460" r="14" fill="#D85A30"/>
+  <text font-family="sans-serif" font-size="11" font-weight="700" fill="#FAECE7" x="416" y="460" text-anchor="middle" dominant-baseline="central">3</text>
+  <text font-family="sans-serif" font-size="11" font-weight="600" fill="#712B13" x="438" y="456" dominant-baseline="central">切分資料集</text>
+  <text font-family="sans-serif" font-size="10" fill="#993C1D" x="438" y="470" dominant-baseline="central">80:20 · train=40 · test=10</text>
+  <circle cx="84" cy="516" r="14" fill="#993C1D"/>
+  <text font-family="sans-serif" font-size="11" font-weight="700" fill="#FAECE7" x="84" y="516" text-anchor="middle" dominant-baseline="central">4</text>
+  <text font-family="sans-serif" font-size="11" font-weight="600" fill="#712B13" x="106" y="512" dominant-baseline="central">StandardScaler</text>
+  <text font-family="sans-serif" font-size="10" fill="#993C1D" x="106" y="526" dominant-baseline="central">fit(X_train) → transform(X_test)</text>
+  <rect x="340" y="505" width="290" height="22" rx="4" fill="#F5C4B3"/>
+  <text font-family="sans-serif" font-size="10" fill="#712B13" x="485" y="516" text-anchor="middle" dominant-baseline="central">注意：只 fit 訓練集，避免資料洩漏</text>
+
+  <line x1="340" y1="552" x2="340" y2="572" stroke="#888780" stroke-width="1" marker-end="url(#arr)"/>
+
+  <!-- PHASE 4 -->
+  <rect x="40" y="572" width="600" height="170" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <rect x="40" y="572" width="8" height="170" rx="4" fill="#185FA5"/>
+  <text font-family="sans-serif" font-size="11" font-weight="600" fill="#0C447C" x="58" y="590" dominant-baseline="central">Phase 4 — Modeling</text>
+  <rect x="58" y="600" width="564" height="20" rx="4" fill="#185FA5"/>
+  <text font-family="sans-serif" font-size="10" fill="#E6F1FB" x="160" y="610" text-anchor="middle" dominant-baseline="central">模型</text>
+  <text font-family="sans-serif" font-size="10" fill="#E6F1FB" x="330" y="610" text-anchor="middle" dominant-baseline="central">R² (test)</text>
+  <text font-family="sans-serif" font-size="10" fill="#E6F1FB" x="440" y="610" text-anchor="middle" dominant-baseline="central">RMSE ($)</text>
+  <text font-family="sans-serif" font-size="10" fill="#E6F1FB" x="566" y="610" text-anchor="middle" dominant-baseline="central">CV R²</text>
+  <rect x="58" y="620" width="564" height="22" rx="3" fill="#B5D4F4"/>
+  <text font-family="sans-serif" font-size="10" font-weight="600" fill="#042C53" x="64" y="631" dominant-baseline="central">★ LinearRegression</text>
+  <text font-family="sans-serif" font-size="10" font-weight="600" fill="#042C53" x="330" y="631" text-anchor="middle" dominant-baseline="central">0.9395</text>
+  <text font-family="sans-serif" font-size="10" font-weight="600" fill="#042C53" x="440" y="631" text-anchor="middle" dominant-baseline="central">7,130</text>
+  <text font-family="sans-serif" font-size="10" font-weight="600" fill="#042C53" x="566" y="631" text-anchor="middle" dominant-baseline="central">0.9431</text>
+  <rect x="58" y="643" width="564" height="20" fill="#E6F1FB"/>
+  <text font-family="sans-serif" font-size="10" fill="#185FA5" x="64" y="653" dominant-baseline="central">Ridge(alpha=1.0)</text>
+  <text font-family="sans-serif" font-size="10" fill="#185FA5" x="330" y="653" text-anchor="middle" dominant-baseline="central">0.9444</text>
+  <text font-family="sans-serif" font-size="10" fill="#185FA5" x="440" y="653" text-anchor="middle" dominant-baseline="central">6,838</text>
+  <text font-family="sans-serif" font-size="10" fill="#185FA5" x="566" y="653" text-anchor="middle" dominant-baseline="central">0.9444</text>
+  <rect x="58" y="663" width="564" height="20" fill="#E6F1FB"/>
+  <text font-family="sans-serif" font-size="10" fill="#185FA5" x="64" y="673" dominant-baseline="central">Lasso(alpha=1.0)</text>
+  <text font-family="sans-serif" font-size="10" fill="#185FA5" x="330" y="673" text-anchor="middle" dominant-baseline="central">0.9395</text>
+  <text font-family="sans-serif" font-size="10" fill="#185FA5" x="440" y="673" text-anchor="middle" dominant-baseline="central">7,130</text>
+  <text font-family="sans-serif" font-size="10" fill="#185FA5" x="566" y="673" text-anchor="middle" dominant-baseline="central">0.9431</text>
+  <rect x="58" y="683" width="564" height="20" fill="#E6F1FB"/>
+  <text font-family="sans-serif" font-size="10" fill="#888780" x="64" y="693" dominant-baseline="central">DecisionTree(max_depth=3)</text>
+  <text font-family="sans-serif" font-size="10" fill="#888780" x="330" y="693" text-anchor="middle" dominant-baseline="central">0.6678</text>
+  <text font-family="sans-serif" font-size="10" fill="#888780" x="440" y="693" text-anchor="middle" dominant-baseline="central">16,708</text>
+  <text font-family="sans-serif" font-size="10" fill="#888780" x="566" y="693" text-anchor="middle" dominant-baseline="central">0.9117</text>
+  <rect x="58" y="703" width="564" height="20" fill="#E6F1FB"/>
+  <text font-family="sans-serif" font-size="10" fill="#185FA5" x="64" y="713" dominant-baseline="central">RandomForest(n=100)</text>
+  <text font-family="sans-serif" font-size="10" fill="#185FA5" x="330" y="713" text-anchor="middle" dominant-baseline="central">0.8298</text>
+  <text font-family="sans-serif" font-size="10" fill="#185FA5" x="440" y="713" text-anchor="middle" dominant-baseline="central">11,960</text>
+  <text font-family="sans-serif" font-size="10" fill="#185FA5" x="566" y="713" text-anchor="middle" dominant-baseline="central">0.9452</text>
+  <text font-family="sans-serif" font-size="10" fill="#0C447C" x="58" y="738" dominant-baseline="central">LinearReg 主要係數：</text>
+  <rect x="178" y="728" width="82" height="18" rx="9" fill="#185FA5"/>
+  <text font-family="sans-serif" font-size="10" fill="#E6F1FB" x="219" y="737" text-anchor="middle" dominant-baseline="central">R&amp;D +0.81</text>
+  <rect x="268" y="728" width="96" height="18" rx="9" fill="#378ADD"/>
+  <text font-family="sans-serif" font-size="10" fill="#E6F1FB" x="316" y="737" text-anchor="middle" dominant-baseline="central">Mkt +0.035</text>
+  <rect x="372" y="728" width="106" height="18" rx="9" fill="#85B7EB"/>
+  <text font-family="sans-serif" font-size="10" fill="#042C53" x="425" y="737" text-anchor="middle" dominant-baseline="central">State 歸零 (Lasso)</text>
+
+  <line x1="340" y1="742" x2="340" y2="762" stroke="#888780" stroke-width="1" marker-end="url(#arr)"/>
+
+  <!-- PHASE 5 -->
+  <rect x="40" y="762" width="600" height="210" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+  <rect x="40" y="762" width="8" height="210" rx="4" fill="#3B6D11"/>
+  <text font-family="sans-serif" font-size="11" font-weight="600" fill="#27500A" x="58" y="780" dominant-baseline="central">Phase 5 — Evaluation</text>
+  <text font-family="sans-serif" font-size="10" fill="#3B6D11" x="58" y="800" dominant-baseline="central">成功標準達成狀況：</text>
+  <rect x="58"  y="810" width="132" height="36" rx="6" fill="#C0DD97"/>
+  <text font-family="sans-serif" font-size="10" font-weight="600" fill="#173404" x="124" y="822" text-anchor="middle" dominant-baseline="central">R² ≥ 0.90</text>
+  <text font-family="sans-serif" font-size="11" fill="#27500A" x="124" y="836" text-anchor="middle" dominant-baseline="central">✓ 0.9395</text>
+  <rect x="198" y="810" width="132" height="36" rx="6" fill="#C0DD97"/>
+  <text font-family="sans-serif" font-size="10" font-weight="600" fill="#173404" x="264" y="822" text-anchor="middle" dominant-baseline="central">CV R² ≥ 0.88</text>
+  <text font-family="sans-serif" font-size="11" fill="#27500A" x="264" y="836" text-anchor="middle" dominant-baseline="central">✓ 0.9431</text>
+  <rect x="338" y="810" width="132" height="36" rx="6" fill="#C0DD97"/>
+  <text font-family="sans-serif" font-size="10" font-weight="600" fill="#173404" x="404" y="822" text-anchor="middle" dominant-baseline="central">MAE ≤ $10,000</text>
+  <text font-family="sans-serif" font-size="11" fill="#27500A" x="404" y="836" text-anchor="middle" dominant-baseline="central">✓ $5,998</text>
+  <rect x="478" y="810" width="144" height="36" rx="6" fill="#C0DD97"/>
+  <text font-family="sans-serif" font-size="10" font-weight="600" fill="#173404" x="550" y="822" text-anchor="middle" dominant-baseline="central">係數可解讀</text>
+  <text font-family="sans-serif" font-size="11" fill="#27500A" x="550" y="836" text-anchor="middle" dominant-baseline="central">✓ LR / Lasso</text>
+  <text font-family="sans-serif" font-size="10" fill="#3B6D11" x="58" y="862" dominant-baseline="central">CV R² 比較（5-fold）：</text>
+  <rect x="68"  y="874" width="56" height="58" rx="3" fill="#3B6D11"/>
+  <text font-family="sans-serif" font-size="9" fill="#27500A" x="96"  y="870" text-anchor="middle" dominant-baseline="central">0.943</text>
+  <rect x="138" y="873" width="56" height="59" rx="3" fill="#639922"/>
+  <text font-family="sans-serif" font-size="9" fill="#27500A" x="166" y="869" text-anchor="middle" dominant-baseline="central">0.944</text>
+  <rect x="208" y="874" width="56" height="58" rx="3" fill="#3B6D11"/>
+  <text font-family="sans-serif" font-size="9" fill="#27500A" x="236" y="870" text-anchor="middle" dominant-baseline="central">0.943</text>
+  <rect x="278" y="879" width="56" height="53" rx="3" fill="#B4B2A9"/>
+  <text font-family="sans-serif" font-size="9" fill="#5F5E5A" x="306" y="875" text-anchor="middle" dominant-baseline="central">0.912</text>
+  <rect x="348" y="872" width="56" height="60" rx="3" fill="#97C459"/>
+  <text font-family="sans-serif" font-size="9" fill="#27500A" x="376" y="868" text-anchor="middle" dominant-baseline="central">0.945</text>
+  <line x1="58" y1="932" x2="420" y2="932" stroke="#888780" stroke-width="0.5"/>
+  <text font-family="sans-serif" font-size="9" fill="#5F5E5A" x="96"  y="944" text-anchor="middle" dominant-baseline="central">LR</text>
+  <text font-family="sans-serif" font-size="9" fill="#5F5E5A" x="166" y="944" text-anchor="middle" dominant-baseline="central">Ridge</text>
+  <text font-family="sans-serif" font-size="9" fill="#5F5E5A" x="236" y="944" text-anchor="middle" dominant-baseline="central">Lasso</text>
+  <text font-family="sans-serif" font-size="9" fill="#5F5E5A" x="306" y="944" text-anchor="middle" dominant-baseline="central">DTree</text>
+  <text font-family="sans-serif" font-size="9" fill="#5F5E5A" x="376" y="944" text-anchor="middle" dominant-baseline="central">RF</text>
+  <rect x="438" y="858" width="190" height="80" rx="6" fill="#C0DD97" stroke="#3B6D11" stroke-width="0.5"/>
+  <text font-family="sans-serif" font-size="10" font-weight="600" fill="#173404" x="533" y="874" text-anchor="middle" dominant-baseline="central">關鍵指標（n=50）</text>
+  <text font-family="sans-serif" font-size="10" fill="#27500A" x="448" y="892" dominant-baseline="central">最重要：CV R²（泛化）</text>
+  <text font-family="sans-serif" font-size="10" fill="#27500A" x="448" y="908" dominant-baseline="central">商業溝通：MAE（美元）</text>
+  <text font-family="sans-serif" font-size="10" fill="#27500A" x="448" y="924" dominant-baseline="central">假設驗證：殘差圖</text>
+  <rect x="58" y="952" width="564" height="12" rx="4" fill="#97C459" opacity="0.8"/>
+  <text font-family="sans-serif" font-size="10" font-weight="600" fill="#173404" x="340" y="958" text-anchor="middle" dominant-baseline="central">全部成功標準達成 · LinearRegression 為首選模型 · 分析框架：CRISP-DM</text>
+
+  <!-- footer -->
+  <text font-family="sans-serif" font-size="9" fill="#888780" x="340" y="1004" text-anchor="middle" dominant-baseline="central">Python · pandas · scikit-learn · Kaggle 50 Startups Dataset</text>
+</svg>
