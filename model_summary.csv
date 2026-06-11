@@ -1,0 +1,3 @@
+﻿Model,R2_test,Adj_R2,RMSE_USD,MAE_USD,CV_R2_mean,CV_R2_std
+LinearRegression,0.8987,0.7721,9055.9573,6961.4778,0.9289,0.0435
+"Lasso(alpha=1.0, Pipeline)",0.8987,0.7722,9054.9225,6960.8884,0.9289,0.0436
