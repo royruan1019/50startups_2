@@ -18,7 +18,6 @@
 
 # CRISP-DM Phase 1 ~ 5：50 Startups 完整分析報告
 
----
 
 ## Phase 1：Business Understanding（商業理解）
 
