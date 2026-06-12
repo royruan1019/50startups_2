@@ -14,12 +14,6 @@
 - charts/ — 視覺化圖表（分布、熱力圖、散點圖、預測比較、殘差、係數）
 - 50_Startups_V1.pptx — 混合版簡報（技術 + 商業，13 張，含講稿備忘錄）　[⬇ 下載](50_Startups_V1.pptx)
 
-## 快速執行
-
-安裝依賴：pip install pandas scikit-learn matplotlib seaborn
-
-執行主程式：python analysis_50startups.py
-
 ---
 
 # CRISP-DM Phase 1 ~ 5：50 Startups 完整分析報告
