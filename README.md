@@ -12,7 +12,7 @@
 - report_50startups.md — 中英雙語完整報告
 - model_summary.csv — 模型評估指標（可匯入 Excel）
 - charts/ — 視覺化圖表（分布、熱力圖、散點圖、預測比較、殘差、係數）
-- [50_Startups_V1.pptx](50_Startups_V1.pptx) — 混合版簡報（技術 + 商業，13 張，含講稿備忘錄）
+- 50_Startups_V1.pptx — 混合版簡報（技術 + 商業，13 張，含講稿備忘錄）　[⬇ 下載](50_Startups_V1.pptx)
 
 ## 快速執行
 
